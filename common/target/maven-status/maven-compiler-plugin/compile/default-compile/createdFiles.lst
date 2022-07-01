@@ -1,0 +1,6 @@
+com\study\my\mapper\UserRoleMapper.class
+com\study\my\mapper\RolePermMapper.class
+com\study\my\entity\UserRole.class
+com\study\my\entity\Roles.class
+com\study\my\mapper\RolesMapper.class
+com\study\my\entity\RolePerm.class

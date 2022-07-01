@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.study.my.mapper.RolePermMapper" >
+  <resultMap id="BaseResultMap" type="com.study.my.entity.RolePerm" >
+    <result column="role_id" property="roleId" jdbcType="INTEGER" />
+    <result column="perm_id" property="permId" jdbcType="INTEGER" />
+  </resultMap>
+  <insert id="insert" parameterType="com.study.my.entity.RolePerm" >
+    insert into role_perm (role_id, perm_id)
+    values (#{roleId,jdbcType=INTEGER}, #{permId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.study.my.entity.RolePerm" >
+    insert into role_perm
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="roleId != null" >
+        role_id,
+      </if>
+      <if test="permId != null" >
+        perm_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="roleId != null" >
+        #{roleId,jdbcType=INTEGER},
+      </if>
+      <if test="permId != null" >
+        #{permId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+</mapper>

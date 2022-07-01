@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: consumer8040
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848

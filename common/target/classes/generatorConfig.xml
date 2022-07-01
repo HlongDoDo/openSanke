@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+<!--数据库驱动-->
+  <classPathEntry location="D:\maven\repository\mysql\mysql-connector-java\5.1.47\mysql-connector-java-5.1.47.jar" />
+  <context id="mybatistables"  targetRuntime="MyBatis3" defaultModelType="flat">
+    <commentGenerator>
+      <property name="suppressAllComments" value="true" />
+      <property name="suppressDate" value="true" />
+      <property name="suppressAllComments" value="true"/>
+    </commentGenerator>
+	 <!--数据库链接地址账号密码-->
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+        connectionURL="jdbc:mysql://127.0.0.1:3306/snake?failOverReadOnly=false&amp;autoReconnect=true&amp;roundRobinLoadBalance=true&amp;useOldAliasMetadataBehavior=true&amp;allowMultiQueries=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull&amp;useSSL=false"
+        userId="root"
+        password="123456">
+    </jdbcConnection>
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+	<!--生成实体类存放位置-->
+    <javaModelGenerator targetPackage="com.study.entity" targetProject="src/main/java">
+      <property name="enableSubPackages" value="true" />
+      <property name="trimStrings" value="false" />
+    </javaModelGenerator>
+	 <!--生成映射xml文件存放位置-->
+    <sqlMapGenerator targetPackage="xml"  targetProject="src/main/resources">
+      <property name="enableSubPackages" value="true" />
+    </sqlMapGenerator>
+	<!--生成Mapper接口存放位置-->
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.study.mapper" targetProject="src/main/java">
+        <property name="enableSubPackages" value="true" />
+    </javaClientGenerator>
+	 <!--生成对应表及类名-->
+    <table tableName="role_perm"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+    </table>
+    <table tableName="roles"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+    </table>
+    <table tableName="user_role"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+    </table>
+
+  </context>
+</generatorConfiguration>
