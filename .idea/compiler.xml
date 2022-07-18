@@ -11,6 +11,7 @@
         <module name="api" />
         <module name="common" />
         <module name="service8082" />
+        <module name="springboot" />
         <module name="service8081" />
       </profile>
     </annotationProcessing>
@@ -25,6 +26,7 @@
       <module name="consumer8040" options="-parameters" />
       <module name="service8081" options="-parameters" />
       <module name="service8082" options="-parameters" />
+      <module name="springboot" options="-parameters" />
     </option>
   </component>
 </project>

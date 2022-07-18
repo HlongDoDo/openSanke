@@ -1,6 +1,6 @@
-package com.study.controller;
+package com.study.start.controller;
 
-import com.study.service.MyService;
+import com.study.start.service.MyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

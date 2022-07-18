@@ -1,19 +1,15 @@
-package com.study;
+package com.springboot;
+/**
+ * @author huangsenwei
+ * @Description 启动类
+ */
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
-/**
- * @author huangsenwei
- * @Description 主启动类
- */
 @SpringBootApplication
-public class ServiceMain8081 {
-
+public class SpringBootMain {
     public static void main(String[] args) {
-        SpringApplication.run(
-                ServiceMain8081.class, args
-        );
+        SpringApplication.run(SpringBootMain.class, args);
     }
 }

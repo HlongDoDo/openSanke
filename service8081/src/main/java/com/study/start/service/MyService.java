@@ -1,4 +1,4 @@
-package com.study.service;
+package com.study.start.service;
 
 /**
  * @author huangsenwei
