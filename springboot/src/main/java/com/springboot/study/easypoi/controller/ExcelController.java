@@ -4,12 +4,13 @@ package com.springboot.study.easypoi.controller;
 import cn.afterturn.easypoi.excel.ExcelImportUtil;
 import cn.afterturn.easypoi.excel.entity.ExportParams;
 import cn.afterturn.easypoi.excel.entity.ImportParams;
+import com.springboot.common.outputentity.ReturnData;
+import com.springboot.common.outputentity.stateenum.OutState;
+import com.springboot.study.aspectexception.customizeexception.CommonException;
 import com.springboot.study.easypoi.util.ExcelUtil;
 import com.springboot.study.easypoi.entity.Student;
 import org.apache.poi.ss.usermodel.Workbook;
-
 import org.springframework.web.multipart.MultipartFile;
-
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -45,7 +46,14 @@ public class ExcelController {
     }
 
     @RequestMapping("/hello")
-    public String helloWorld() {
+    public String helloWorld() throws CommonException {
+
+        try {
+            int i = 1/0 ;
+        }catch (Exception e){
+            throw new CommonException(OutState.STATE_FAIL);
+        }
+
         return "helloWorld";
     }
 
@@ -64,13 +72,29 @@ public class ExcelController {
     }
 
     private List<Student> getList() {
+
         List<Student> res = new ArrayList<>();
         Student student1 = new Student(1, "天天","");
 
         Student student2 = new Student(2, "上班","");
         res.add(student1);
         res.add(student2);
+
         return res;
     }
 
+    @RequestMapping("/getReturnTemplate")
+    public  ReturnData<List<Student>> getReturnTemplate(){
+        ReturnData<List<Student>> listReturnData = new ReturnData<>();
+        List<Student> res = new ArrayList<>();
+        Student student1 = new Student(1, "天天","");
+
+        Student student2 = new Student(2, "上班","");
+        res.add(student1);
+        res.add(student2);
+
+        listReturnData.setData(res);
+        listReturnData.setState(OutState.STATE_OK);
+        return listReturnData;
+    }
 }
