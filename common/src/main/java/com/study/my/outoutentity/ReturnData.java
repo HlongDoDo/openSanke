@@ -1,7 +1,7 @@
-package com.springboot.common.outputentity;
+package com.study.my.outoutentity;
 
-import com.springboot.common.outputentity.stateenum.OutState;
-import com.springboot.study.aspectexception.customizeexception.CommonException;
+import com.study.my.customizeexception.CommonException;
+import com.study.my.outoutentity.stateenum.OutState;
 import lombok.Data;
 
 /**
@@ -34,11 +34,11 @@ public class ReturnData<T> {
         this.mes = state.getMes();
     }
 
-    public static  ReturnData fail(CommonException e) {
+    public static  ReturnData<Object> fail(CommonException e) {
         return  new ReturnData<>(e.getState());
     }
 
-    public static  ReturnData success() {
+    public static  ReturnData<Object> success() {
         return  new ReturnData<>(OutState.STATE_OK);
     }
 

@@ -1,2 +1,6 @@
 server:
   port: 8040
+
+
+rocketmq:
+  name-server: 106.13.26.49:9876

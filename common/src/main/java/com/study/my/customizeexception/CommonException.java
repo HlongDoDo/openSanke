@@ -1,15 +1,15 @@
-package com.springboot.study.aspectexception.customizeexception;
+package com.study.my.customizeexception;
 
-import com.alibaba.fastjson.JSON;
-import com.springboot.common.outputentity.stateenum.OutState;
+
+import com.study.my.outoutentity.stateenum.OutState;
 
 /**
  * @author huangsenwei
- * @Description 算数异常
+ * @Description 通用异常
  */
 public class CommonException extends Exception {
 
-    private final OutState state;
+    private OutState state;
 
     public CommonException(OutState state) {
         this.state = state;

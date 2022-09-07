@@ -1,4 +1,4 @@
-package com.springboot.study.aspectexception;
+package com.study.aspectexception;
 
 import com.study.my.customizeexception.CommonException;
 import com.study.my.outoutentity.ReturnData;

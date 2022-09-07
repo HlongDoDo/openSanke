@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @author huangsenwei
- * @Description
+ * @Description 消费者启动类
  */
 @SpringBootApplication(exclude= {DataSourceAutoConfiguration.class})
 @EnableFeignClients

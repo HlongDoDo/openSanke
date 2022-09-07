@@ -1,4 +1,4 @@
-package com.springboot.common.outputentity.stateenum;
+package com.study.my.outoutentity.stateenum;
 
 /**
  * @author huangsenwei

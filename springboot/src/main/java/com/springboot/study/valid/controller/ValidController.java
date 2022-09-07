@@ -1,8 +1,7 @@
 package com.springboot.study.valid.controller;
 
-import com.springboot.common.outputentity.ReturnData;
+import com.study.my.outoutentity.ReturnData;
 import com.springboot.study.valid.entity.StudentValid;
-import org.apache.ibatis.annotations.Insert;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;
