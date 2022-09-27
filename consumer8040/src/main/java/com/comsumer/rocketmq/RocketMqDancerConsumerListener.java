@@ -8,8 +8,9 @@ import org.springframework.stereotype.Service;
  * @author huangsenwei
  * @Description 舞者消费者监听类
  */
-@Service
-@RocketMQMessageListener(consumerGroup = "dancerConsumerGroup", topic = "dancerTopic")
+//注册成bean+监听配置
+//@Service
+//@RocketMQMessageListener(consumerGroup = "dancerConsumerGroup", topic = "dancerTopic")
 public class RocketMqDancerConsumerListener implements RocketMQListener<String> {
 
     @Override

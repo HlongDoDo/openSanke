@@ -24,7 +24,7 @@ public class AllExceptionAspect {
      */
     @ExceptionHandler(Exception.class)
     @ResponseBody
-    public ReturnData exception(Exception exception) {
+    public ReturnData<Object> exception(Exception exception) {
         log.error("出现异常",exception);
         ReturnData<Object> returnData = new ReturnData<>();
         returnData.setCode(OutState.STATE_FAIL.getCode());
@@ -41,7 +41,7 @@ public class AllExceptionAspect {
      */
     @ExceptionHandler(CommonException.class)
     @ResponseBody
-    public ReturnData exception(CommonException exception) {
+    public ReturnData<Object> exception(CommonException exception) {
         log.error("出现异常",exception);
        return ReturnData.fail(exception);
     }

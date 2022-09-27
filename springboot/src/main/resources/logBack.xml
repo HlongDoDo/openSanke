@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="APP_Name" value="springBoot" />
+    <contextName>${APP_Name}</contextName>
+    <property name="LOG_HOME" value="${user.dir}/${APP_Name}" />
+    <!-- 控制台输出 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符 -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %X{request-id} %logger{80} - %msg%n</pattern>
+        </layout>
+    </appender>
+
+    <appender name="ERROR_FILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <File>${LOG_HOME}/logs/error/error-${APP_Name}.log</File>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/logs/error/error-${APP_Name}.%d{yyyy-MM-dd-HH}.%i.log</fileNamePattern>
+            <maxHistory>40</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>3MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{sessionId}] %-5level %class.%method Line:%-3L - %msg%n</pattern>
+        </layout>
+    </appender>
+
+    <appender name="WARN_FILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <File>${LOG_HOME}/logs/warn/warn-${APP_Name}.log</File>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/logs/warn/warn-${APP_Name}.%d{yyyy-MM-dd-HH}.%i.log</fileNamePattern>
+            <maxHistory>40</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>3MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{sessionId}] %-5level %class.%method Line:%-3L - %msg%n</pattern>
+        </layout>
+    </appender>
+
+    <appender name="INFO_FILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <File>${LOG_HOME}/logs/info/info-${APP_Name}.log</File>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/logs/info/info-${APP_Name}.%d{yyyy-MM-dd-HH}.%i.log</fileNamePattern>
+            <maxHistory>40</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>3MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{sessionId}] %-5level %class.%method Line:%-3L - %msg%n</pattern>
+        </layout>
+    </appender>
+
+    <appender name="DEBUG_FILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>DEBUG</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <File>${LOG_HOME}/logs/debug/debug-${APP_Name}.log</File>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/logs/debug/debug-${APP_Name}.%d{yyyy-MM-dd-HH}.%i.log</fileNamePattern>
+            <maxHistory>40</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>3MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{sessionId}] %-5level %class.%method Line:%-3L - %msg%n</pattern>
+        </layout>
+    </appender>
+
+    <appender name="myFileAppender"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <File>${LOG_HOME}/logs/single/info/info-${APP_Name}.log</File>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/logs/single/info/info-${APP_Name}.%d{yyyy-MM-dd-HH}.%i.log</fileNamePattern>
+            <maxHistory>40</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>3MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{sessionId}] %-5level %class.%method Line:%-3L - %msg%n</pattern>
+        </layout>
+    </appender>
+
+    <logger name="com.springboot.study.logBack.LogBackSingleController" value="INFO" additivity="false" >
+        <appender-ref ref="myFileAppender"/>
+    </logger>
+
+    <!-- 日志输出级别 -->
+    <root level="INFO">
+        <!--屏蔽输出到控制台 <appender-ref ref="STDOUT" /> -->
+        <appender-ref ref="DEBUG_FILE" />
+        <appender-ref ref="INFO_FILE" />
+        <appender-ref ref="WARN_FILE" />
+        <appender-ref ref="ERROR_FILE" />
+    </root>
+</configuration>

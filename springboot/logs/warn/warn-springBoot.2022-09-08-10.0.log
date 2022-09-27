@@ -1,0 +1,4 @@
+2022-09-08 10:13:24.420 [] WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration.configureArchaius Line:123 - No spring.application.name found, defaulting to 'application'
+2022-09-08 10:13:24.425 [] WARN  com.netflix.config.sources.URLConfigurationSource.<init> Line:121 - No URLs will be polled as dynamic configuration sources.
+2022-09-08 10:13:24.429 [] WARN  com.netflix.config.sources.URLConfigurationSource.<init> Line:121 - No URLs will be polled as dynamic configuration sources.
+2022-09-08 10:13:24.694 [] WARN  org.apache.rocketmq.spring.autoconfigure.RocketMQAutoConfiguration.checkProperties Line:85  - The necessary spring property 'rocketmq.name-server' is not defined, all rockertmq beans creation are skipped!

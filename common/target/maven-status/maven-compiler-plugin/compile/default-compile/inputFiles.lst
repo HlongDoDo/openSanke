@@ -1,8 +1,9 @@
-D:\personalstudy\openSanke\common\src\main\java\com\study\my\entity\User.java
-D:\personalstudy\openSanke\common\src\main\java\com\study\my\mapper\UserMapper.java
+D:\personalstudy\openSanke\common\src\main\java\com\study\my\customizeexception\CommonException.java
 D:\personalstudy\openSanke\common\src\main\java\com\study\my\entity\Roles.java
 D:\personalstudy\openSanke\common\src\main\java\com\study\my\entity\RolePerm.java
 D:\personalstudy\openSanke\common\src\main\java\com\study\my\mapper\RolesMapper.java
+D:\personalstudy\openSanke\common\src\main\java\com\study\my\outoutentity\ReturnData.java
+D:\personalstudy\openSanke\common\src\main\java\com\study\my\outoutentity\stateenum\OutState.java
 D:\personalstudy\openSanke\common\src\main\java\com\study\my\mapper\UserRoleMapper.java
 D:\personalstudy\openSanke\common\src\main\java\com\study\my\entity\UserRole.java
 D:\personalstudy\openSanke\common\src\main\java\com\study\my\mapper\RolePermMapper.java

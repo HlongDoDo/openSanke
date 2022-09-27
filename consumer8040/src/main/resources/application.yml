@@ -3,4 +3,6 @@ server:
 
 
 rocketmq:
-  name-server: 106.13.26.49:9876
+  name-server:  106.13.26.49:9876;106.13.26.49:8876
+  consumer:
+    topic: dancerTopic

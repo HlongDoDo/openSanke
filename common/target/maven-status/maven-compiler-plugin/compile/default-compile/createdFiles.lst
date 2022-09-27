@@ -1,8 +1,9 @@
 com\study\my\mapper\UserRoleMapper.class
 com\study\my\mapper\RolePermMapper.class
-com\study\my\entity\User.class
 com\study\my\entity\UserRole.class
+com\study\my\customizeexception\CommonException.class
 com\study\my\entity\Roles.class
 com\study\my\mapper\RolesMapper.class
-com\study\my\mapper\UserMapper.class
+com\study\my\outoutentity\ReturnData.class
+com\study\my\outoutentity\stateenum\OutState.class
 com\study\my\entity\RolePerm.class

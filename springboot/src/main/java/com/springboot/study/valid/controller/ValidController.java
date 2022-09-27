@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ValidController {
 
     @RequestMapping("/inInfo")
-    public ReturnData inInfo( @RequestBody @Validated StudentValid studentValid, BindingResult bindingResult) {
+    public ReturnData<Object> inInfo( @RequestBody @Validated StudentValid studentValid, BindingResult bindingResult) {
 
         if (bindingResult.hasErrors()) {
             throw new RuntimeException(bindingResult.getAllErrors().get(0).getDefaultMessage());

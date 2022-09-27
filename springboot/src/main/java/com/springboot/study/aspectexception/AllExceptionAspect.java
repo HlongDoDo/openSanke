@@ -4,15 +4,15 @@ import com.study.my.customizeexception.CommonException;
 import com.study.my.outoutentity.ReturnData;
 import com.study.my.outoutentity.stateenum.OutState;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
  * @author huangsenwei
  * @Description 全局统一异常处理
  */
-@ControllerAdvice
+@RestControllerAdvice
 @Slf4j
 public class AllExceptionAspect {
 
@@ -24,7 +24,7 @@ public class AllExceptionAspect {
      */
     @ExceptionHandler(Exception.class)
     @ResponseBody
-    public ReturnData exception(Exception exception) {
+    public ReturnData<Object> exception(Exception exception) {
         log.error("出现异常",exception);
         ReturnData<Object> returnData = new ReturnData<>();
         returnData.setCode(OutState.STATE_FAIL.getCode());
@@ -41,7 +41,7 @@ public class AllExceptionAspect {
      */
     @ExceptionHandler(CommonException.class)
     @ResponseBody
-    public ReturnData exception(CommonException exception) {
+    public ReturnData<Object> exception(CommonException exception) {
         log.error("出现异常",exception);
        return ReturnData.fail(exception);
     }

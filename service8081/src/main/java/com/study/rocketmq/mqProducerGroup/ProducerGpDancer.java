@@ -35,13 +35,18 @@ public class ProducerGpDancer {
 
     public void sendSyncMessage(DancerInfo dancerInfo) throws Exception {
         DefaultMQProducer dancerProduct = new DefaultMQProducer(dancerGroupName);
-        dancerProduct.setNamesrvAddr(nameSrvAddress);
-        dancerProduct.start();
-        Message message = new Message(topic, producerUtil.toMessageBody(dancerInfo));
-        log.info("ProducerGpDancer sendSyncMessage message={}",message);
-        SendResult sendResult = dancerProduct.send(message, dancerProducerSendTimeOut);
-        log.info("ProducerGpDancer sendSyncMessage sendResult={}",sendResult);
-        dancerProduct.shutdown();
+        try {
+            dancerProduct.setNamesrvAddr(nameSrvAddress);
+            dancerProduct.start();
+
+            Message message = new Message(topic, producerUtil.toMessageBody(dancerInfo));
+            // log.info("ProducerGpDancer sendSyncMessage message={}",message);
+            SendResult sendResult = dancerProduct.send(message, dancerProducerSendTimeOut);
+            log.info("ProducerGpDancer sendSyncMessage sendResult={}",sendResult);
+        }finally {
+            dancerProduct.shutdown();
+        }
+
     }
 
 }

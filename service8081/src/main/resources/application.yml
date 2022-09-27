@@ -19,7 +19,7 @@ mybatis:
   mapper-locations: classpath*:xml/*Mapper.xml
 
 rocketMq:
-  nameSrvAdress: 106.13.26.49:9876
+  nameSrvAdress: 106.13.26.49:9876;106.13.26.49:8876
   producerDancer:
     group: dancerGroup
     topic: dancerTopic

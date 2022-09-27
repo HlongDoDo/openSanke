@@ -1,0 +1,34 @@
+2022-09-27 15:40:12.150 [] INFO  org.springframework.boot.SpringApplication.logStartupProfileInfo Line:651 - No active profile set, falling back to default profiles: default
+2022-09-27 15:40:12.689 [] INFO  org.springframework.cloud.context.scope.GenericScope.setSerializationId Line:295 - BeanFactory id=fd40eba5-f66c-3205-be7e-51eb46e35c38
+2022-09-27 15:40:12.933 [] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize Line:108 - Tomcat initialized with port(s): 9901 (http)
+2022-09-27 15:40:12.942 [] INFO  org.apache.juli.logging.DirectJDKLog.log Line:173 - Initializing ProtocolHandler ["http-nio-9901"]
+2022-09-27 15:40:12.943 [] INFO  org.apache.juli.logging.DirectJDKLog.log Line:173 - Starting service [Tomcat]
+2022-09-27 15:40:12.943 [] INFO  org.apache.juli.logging.DirectJDKLog.log Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2022-09-27 15:40:13.030 [] INFO  org.apache.juli.logging.DirectJDKLog.log Line:173 - Initializing Spring embedded WebApplicationContext
+2022-09-27 15:40:13.030 [] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext Line:285 - Root WebApplicationContext: initialization completed in 865 ms
+2022-09-27 15:40:13.074 [] INFO  com.netflix.config.sources.URLConfigurationSource.<init> Line:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-27 15:40:13.077 [] INFO  com.netflix.config.sources.URLConfigurationSource.<init> Line:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-27 15:40:13.230 [] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize Line:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-27 15:40:13.682 [] INFO  org.apache.juli.logging.DirectJDKLog.log Line:173 - Starting ProtocolHandler ["http-nio-9901"]
+2022-09-27 15:40:13.700 [] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start Line:220 - Tomcat started on port(s): 9901 (http) with context path ''
+2022-09-27 15:40:13.919 [] INFO  org.springframework.boot.StartupInfoLogger.logStarted Line:61  - Started SpringBootMain in 3.092 seconds (JVM running for 3.952)
+2022-09-27 15:42:19.120 [] INFO  org.apache.juli.logging.DirectJDKLog.log Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-27 15:42:19.121 [] INFO  org.springframework.web.servlet.FrameworkServlet.initServletBean Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-09-27 15:42:19.124 [] INFO  org.springframework.web.servlet.FrameworkServlet.initServletBean Line:547 - Completed initialization in 3 ms
+2022-09-27 15:45:36.458 [] INFO  org.springframework.boot.SpringApplication.logStartupProfileInfo Line:651 - No active profile set, falling back to default profiles: default
+2022-09-27 15:45:36.958 [] INFO  org.springframework.cloud.context.scope.GenericScope.setSerializationId Line:295 - BeanFactory id=fd40eba5-f66c-3205-be7e-51eb46e35c38
+2022-09-27 15:45:37.170 [] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize Line:108 - Tomcat initialized with port(s): 9901 (http)
+2022-09-27 15:45:37.176 [] INFO  org.apache.juli.logging.DirectJDKLog.log Line:173 - Initializing ProtocolHandler ["http-nio-9901"]
+2022-09-27 15:45:37.176 [] INFO  org.apache.juli.logging.DirectJDKLog.log Line:173 - Starting service [Tomcat]
+2022-09-27 15:45:37.176 [] INFO  org.apache.juli.logging.DirectJDKLog.log Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.36]
+2022-09-27 15:45:37.257 [] INFO  org.apache.juli.logging.DirectJDKLog.log Line:173 - Initializing Spring embedded WebApplicationContext
+2022-09-27 15:45:37.258 [] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext Line:285 - Root WebApplicationContext: initialization completed in 787 ms
+2022-09-27 15:45:37.297 [] INFO  com.netflix.config.sources.URLConfigurationSource.<init> Line:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-27 15:45:37.300 [] INFO  com.netflix.config.sources.URLConfigurationSource.<init> Line:122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-09-27 15:45:37.458 [] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize Line:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2022-09-27 15:45:37.855 [] INFO  org.apache.juli.logging.DirectJDKLog.log Line:173 - Starting ProtocolHandler ["http-nio-9901"]
+2022-09-27 15:45:37.871 [] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start Line:220 - Tomcat started on port(s): 9901 (http) with context path ''
+2022-09-27 15:45:38.078 [] INFO  org.springframework.boot.StartupInfoLogger.logStarted Line:61  - Started SpringBootMain in 3.394 seconds (JVM running for 4.428)
+2022-09-27 15:46:31.075 [] INFO  org.apache.juli.logging.DirectJDKLog.log Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-27 15:46:31.075 [] INFO  org.springframework.web.servlet.FrameworkServlet.initServletBean Line:525 - Initializing Servlet 'dispatcherServlet'
+2022-09-27 15:46:31.079 [] INFO  org.springframework.web.servlet.FrameworkServlet.initServletBean Line:547 - Completed initialization in 3 ms

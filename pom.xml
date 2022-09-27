@@ -25,12 +25,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.example</groupId>
-            <artifactId>common</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
@@ -155,6 +149,25 @@
             <artifactId>rocketmq-acl</artifactId>
             <version>4.9.0</version>
         </dependency>
+
+
+        <!-- logBack-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>1.2.11</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.11 </version>
+        </dependency>
+
     </dependencies>
 
     <build>

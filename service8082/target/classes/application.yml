@@ -15,3 +15,9 @@ mybatis:
   configuration:
     map-underscore-to-camel-case: true
   mapper-locations: classpath*:xml/*Mapper.xml
+
+
+rocketmq:
+  name-server: 106.13.26.49:9876;106.13.26.49:8876
+  consumer:
+    topic: dancerTopic

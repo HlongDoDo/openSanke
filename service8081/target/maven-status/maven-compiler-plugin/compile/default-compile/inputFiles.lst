@@ -1,4 +1,11 @@
-D:\personalstudy\springcloud\service8081\src\main\java\com\study\service\Impl\MyServiceImpl.java
-D:\personalstudy\springcloud\service8081\src\main\java\com\study\ServiceMain8081.java
-D:\personalstudy\springcloud\service8081\src\main\java\com\study\controller\MyController.java
-D:\personalstudy\springcloud\service8081\src\main\java\com\study\service\MyService.java
+D:\personalstudy\openSanke\service8081\src\main\java\com\study\aspectexception\AllExceptionAspect.java
+D:\personalstudy\openSanke\service8081\src\main\java\com\study\start\controller\MyController.java
+D:\personalstudy\openSanke\service8081\src\main\java\com\study\start\service\MyService.java
+D:\personalstudy\openSanke\service8081\src\main\java\com\study\rocketmq\mqProducerGroup\ProducerGpDancer.java
+D:\personalstudy\openSanke\service8081\src\main\java\com\study\rocketmq\entity\DancerInfo.java
+D:\personalstudy\openSanke\service8081\src\main\java\com\study\rocketmq\controller\RocketMqProducerController.java
+D:\personalstudy\openSanke\service8081\src\main\java\com\study\rocketmq\ProducerMqClient.java
+D:\personalstudy\openSanke\service8081\src\main\java\com\study\start\service\Impl\MyServiceImpl.java
+D:\personalstudy\openSanke\service8081\src\main\java\com\study\rocketmq\mqProducerGroup\ProducerGpStudent.java
+D:\personalstudy\openSanke\service8081\src\main\java\com\study\rocketmq\mqProducerGroup\ProducerUtil.java
+D:\personalstudy\openSanke\service8081\src\main\java\com\study\ServiceMain8081.java
