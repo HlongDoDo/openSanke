@@ -7,4 +7,6 @@ package com.study.start.service;
 public interface  MyService {
 
     String search(int i);
+
+    String searchPhoneInfo();
 }

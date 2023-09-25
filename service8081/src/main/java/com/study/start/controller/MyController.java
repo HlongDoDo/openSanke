@@ -21,4 +21,9 @@ public class MyController {
     public String getRecord(@PathVariable("id") Integer id){
         return myService.search(id);
     }
+
+    @RequestMapping("/getPhoneInfo")
+    public String getPhone(){
+        return myService.searchPhoneInfo();
+    }
 }

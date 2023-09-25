@@ -8,7 +8,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/snake?serverTimezone=Asia/Shanghai&characterEncoding=utf-8
     username: root
-    password: 123456
+    password: 123456root.
 #  redis:
 #    host: 127.0.0.1
 #    port: 6379
@@ -16,6 +16,7 @@ spring:
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath*:xml/*Mapper.xml
 
 rocketMq:

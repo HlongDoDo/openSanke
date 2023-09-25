@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.study.my.mapper.BrandMapper" >
+  <resultMap id="BaseResultMap" type="com.study.my.entity.Brand" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="brand_name" property="brandName" jdbcType="VARCHAR" />
+    <result column="model_no" property="modelNo" jdbcType="VARCHAR" />
+    <result column="brand_no" property="brandNo" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="BaseResultMapInfo" type="com.study.my.vo.phone.PhoneInfoVo" >
+    <result column="keyWord" property="keyWordName" jdbcType="VARCHAR" />
+    <result column="brand_name" property="brand" jdbcType="VARCHAR" />
+    <collection property="modelList" ofType="com.study.my.vo.phone.ModelInfo">
+      <result column="model_name" property="modelName"/>
+    </collection>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, brand_name, model_no, brand_no
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from brand
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectPhoneAllInfo" resultMap="BaseResultMapInfo">
+    SELECT  keyWord  ,brand_name ,model_name
+    FROM
+      (SELECT keyWord,brand_name,model_no,brand_no
+       FROM brand LEFT JOIN key_word ON brand.model_no = key_word.no) AS branInfo
+        LEFT JOIN model ON branInfo.brand_no = model.model_brand_no
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from brand
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.study.my.entity.Brand" >
+    insert into brand (id, brand_name, model_no, 
+      brand_no)
+    values (#{id,jdbcType=INTEGER}, #{brandName,jdbcType=VARCHAR}, #{modelNo,jdbcType=VARCHAR}, 
+      #{brandNo,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.study.my.entity.Brand" >
+    insert into brand
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="brandName != null" >
+        brand_name,
+      </if>
+      <if test="modelNo != null" >
+        model_no,
+      </if>
+      <if test="brandNo != null" >
+        brand_no,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="brandName != null" >
+        #{brandName,jdbcType=VARCHAR},
+      </if>
+      <if test="modelNo != null" >
+        #{modelNo,jdbcType=VARCHAR},
+      </if>
+      <if test="brandNo != null" >
+        #{brandNo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.study.my.entity.Brand" >
+    update brand
+    <set >
+      <if test="brandName != null" >
+        brand_name = #{brandName,jdbcType=VARCHAR},
+      </if>
+      <if test="modelNo != null" >
+        model_no = #{modelNo,jdbcType=VARCHAR},
+      </if>
+      <if test="brandNo != null" >
+        brand_no = #{brandNo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.study.my.entity.Brand" >
+    update brand
+    set brand_name = #{brandName,jdbcType=VARCHAR},
+      model_no = #{modelNo,jdbcType=VARCHAR},
+      brand_no = #{brandNo,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+</mapper>

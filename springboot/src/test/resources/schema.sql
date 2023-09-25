@@ -1,0 +1,22 @@
+CREATE TABLE `fsmp_rwh_app_info` (
+`id` int NOT NULL AUTO_INCREMENT COMMENT 'id',
+`name` varchar(32) NOT NULL COMMENT 'app名称',
+`prod_desc` text NOT NULL COMMENT '权宜产品描述',
+`app_order` int NOT NULL COMMENT '排序',
+`logo_url` varchar(256) NOT NULL COMMENT 'logo链接',
+`gmt_create` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+`gmt_modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+`state` int DEFAULT '0' COMMENT '状态 0:上线,1:下线,2:删除',
+`category_id` int DEFAULT NULL COMMENT '表fsmp_rwh_category.id 类别id',
+`version_id` varchar(20) DEFAULT NULL COMMENT '版本ID',
+`gmt_create_user` varchar(100) NOT NULL COMMENT '创建用户',
+`gmt_modified_user` varchar(100) NOT NULL COMMENT '最后更新用户',
+`logo_pic_attach_id` varchar(50) DEFAULT NULL COMMENT 'logo附件id',
+`recommend_date` datetime DEFAULT NULL COMMENT '开始推荐日期',
+`recommend_day` int DEFAULT NULL COMMENT '推荐天数',
+`display_city` varchar(64) DEFAULT NULL COMMENT '可见地市id（备注：多个id用英文逗号分割，为空时全部可见）',
+`recommended` tinyint NOT NULL DEFAULT '0' COMMENT '是否推荐 0:否,1:是',
+`member_type` varchar(20) DEFAULT NULL COMMENT '会员类型',
+`category_name` varchar(16) DEFAULT NULL COMMENT '分类名称',
+PRIMARY KEY (`id`))
+ ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='任我换权益APP名称表';

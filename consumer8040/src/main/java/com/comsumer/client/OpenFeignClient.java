@@ -15,6 +15,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public interface OpenFeignClient {
 
     @ResponseBody
-    @RequestMapping(value = "/service//getRecord/{id}",produces = "application/json;charset=UTF-8")
+    @RequestMapping(value = "/service/getRecord/{id}",produces = "application/json;charset=UTF-8")
     String consumerGetService(@PathVariable("id") int id);
 }

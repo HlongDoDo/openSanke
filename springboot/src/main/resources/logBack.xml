@@ -126,13 +126,13 @@
         </layout>
     </appender>
 
-    <logger name="com.springboot.study.logBack.LogBackSingleController" value="INFO" additivity="false" >
+    <logger name="com.study.logBack.LogBackSingleController" value="INFO" additivity="false" >
         <appender-ref ref="myFileAppender"/>
     </logger>
 
     <!-- 日志输出级别 -->
     <root level="INFO">
-        <!--屏蔽输出到控制台 <appender-ref ref="STDOUT" /> -->
+         <appender-ref ref="STDOUT" />
         <appender-ref ref="DEBUG_FILE" />
         <appender-ref ref="INFO_FILE" />
         <appender-ref ref="WARN_FILE" />

@@ -17,7 +17,7 @@ import java.nio.charset.StandardCharsets;
  * @Description 舞者消费者监听类
  */
 @Slf4j
-@Service
+//@Service
 public class RocketMqDancerDefaultConsumer {
     @Value("${rocketmq.consumer.topic}")
     private String topic;

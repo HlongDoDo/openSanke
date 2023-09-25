@@ -21,7 +21,7 @@
       <property name="forceBigDecimals" value="false" />
     </javaTypeResolver>
 	<!--生成实体类存放位置-->
-    <javaModelGenerator targetPackage="com.study.entity" targetProject="src/main/java">
+    <javaModelGenerator targetPackage="com.study.my.entity" targetProject="src/main/java">
       <property name="enableSubPackages" value="true" />
       <property name="trimStrings" value="false" />
     </javaModelGenerator>
@@ -30,25 +30,15 @@
       <property name="enableSubPackages" value="true" />
     </sqlMapGenerator>
 	<!--生成Mapper接口存放位置-->
-    <javaClientGenerator type="XMLMAPPER" targetPackage="com.study.mapper" targetProject="src/main/java">
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.study.my.mapper" targetProject="src/main/java">
         <property name="enableSubPackages" value="true" />
     </javaClientGenerator>
 	 <!--生成对应表及类名-->
-    <table tableName="role_perm"
-           enableCountByExample="false" enableUpdateByExample="false"
-           enableDeleteByExample="false" enableSelectByExample="false"
-           selectByExampleQueryId="false">
-    </table>
-    <table tableName="roles"
-           enableCountByExample="false" enableUpdateByExample="false"
-           enableDeleteByExample="false" enableSelectByExample="false"
-           selectByExampleQueryId="false">
-    </table>
-    <table tableName="user_role"
-           enableCountByExample="false" enableUpdateByExample="false"
-           enableDeleteByExample="false" enableSelectByExample="false"
-           selectByExampleQueryId="false">
-    </table>
 
+    <table tableName="fsmp_rwh_iop_prod_info"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+    </table>
   </context>
 </generatorConfiguration>

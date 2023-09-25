@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.study.my.mapper.FsmpRwhCategoryMapper" >
+  <resultMap id="BaseResultMap" type="com.study.my.entity.FsmpRwhCategory" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="category" property="category" jdbcType="VARCHAR" />
+    <result column="show_name" property="showName" jdbcType="VARCHAR" />
+    <result column="location_name" property="locationName" jdbcType="VARCHAR" />
+    <result column="category_order" property="categoryOrder" jdbcType="INTEGER" />
+    <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
+    <result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="introduction" property="introduction" jdbcType="VARCHAR" />
+    <result column="version_id" property="versionId" jdbcType="VARCHAR" />
+    <result column="gmt_create_user" property="gmtCreateUser" jdbcType="VARCHAR" />
+    <result column="gmt_modified_user" property="gmtModifiedUser" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, category, show_name, location_name, category_order, gmt_create, gmt_modified, 
+    state, introduction, version_id, gmt_create_user, gmt_modified_user
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from fsmp_rwh_category
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from fsmp_rwh_category
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.study.my.entity.FsmpRwhCategory" >
+    insert into fsmp_rwh_category (id, category, show_name, 
+      location_name, category_order, gmt_create, 
+      gmt_modified, state, introduction, 
+      version_id, gmt_create_user, gmt_modified_user
+      )
+    values (#{id,jdbcType=INTEGER}, #{category,jdbcType=VARCHAR}, #{showName,jdbcType=VARCHAR}, 
+      #{locationName,jdbcType=VARCHAR}, #{categoryOrder,jdbcType=INTEGER}, #{gmtCreate,jdbcType=TIMESTAMP}, 
+      #{gmtModified,jdbcType=TIMESTAMP}, #{state,jdbcType=INTEGER}, #{introduction,jdbcType=VARCHAR}, 
+      #{versionId,jdbcType=VARCHAR}, #{gmtCreateUser,jdbcType=VARCHAR}, #{gmtModifiedUser,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.study.my.entity.FsmpRwhCategory" >
+    insert into fsmp_rwh_category
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="category != null" >
+        category,
+      </if>
+      <if test="showName != null" >
+        show_name,
+      </if>
+      <if test="locationName != null" >
+        location_name,
+      </if>
+      <if test="categoryOrder != null" >
+        category_order,
+      </if>
+      <if test="gmtCreate != null" >
+        gmt_create,
+      </if>
+      <if test="gmtModified != null" >
+        gmt_modified,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="introduction != null" >
+        introduction,
+      </if>
+      <if test="versionId != null" >
+        version_id,
+      </if>
+      <if test="gmtCreateUser != null" >
+        gmt_create_user,
+      </if>
+      <if test="gmtModifiedUser != null" >
+        gmt_modified_user,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="category != null" >
+        #{category,jdbcType=VARCHAR},
+      </if>
+      <if test="showName != null" >
+        #{showName,jdbcType=VARCHAR},
+      </if>
+      <if test="locationName != null" >
+        #{locationName,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryOrder != null" >
+        #{categoryOrder,jdbcType=INTEGER},
+      </if>
+      <if test="gmtCreate != null" >
+        #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModified != null" >
+        #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="introduction != null" >
+        #{introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="versionId != null" >
+        #{versionId,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtCreateUser != null" >
+        #{gmtCreateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtModifiedUser != null" >
+        #{gmtModifiedUser,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.study.my.entity.FsmpRwhCategory" >
+    update fsmp_rwh_category
+    <set >
+      <if test="category != null" >
+        category = #{category,jdbcType=VARCHAR},
+      </if>
+      <if test="showName != null" >
+        show_name = #{showName,jdbcType=VARCHAR},
+      </if>
+      <if test="locationName != null" >
+        location_name = #{locationName,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryOrder != null" >
+        category_order = #{categoryOrder,jdbcType=INTEGER},
+      </if>
+      <if test="gmtCreate != null" >
+        gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModified != null" >
+        gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=INTEGER},
+      </if>
+      <if test="introduction != null" >
+        introduction = #{introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="versionId != null" >
+        version_id = #{versionId,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtCreateUser != null" >
+        gmt_create_user = #{gmtCreateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtModifiedUser != null" >
+        gmt_modified_user = #{gmtModifiedUser,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.study.my.entity.FsmpRwhCategory" >
+    update fsmp_rwh_category
+    set category = #{category,jdbcType=VARCHAR},
+      show_name = #{showName,jdbcType=VARCHAR},
+      location_name = #{locationName,jdbcType=VARCHAR},
+      category_order = #{categoryOrder,jdbcType=INTEGER},
+      gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
+      state = #{state,jdbcType=INTEGER},
+      introduction = #{introduction,jdbcType=VARCHAR},
+      version_id = #{versionId,jdbcType=VARCHAR},
+      gmt_create_user = #{gmtCreateUser,jdbcType=VARCHAR},
+      gmt_modified_user = #{gmtModifiedUser,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

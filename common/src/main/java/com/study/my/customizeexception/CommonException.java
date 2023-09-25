@@ -7,7 +7,7 @@ import com.study.my.outoutentity.stateenum.OutState;
  * @author huangsenwei
  * @Description 通用异常
  */
-public class CommonException extends Exception {
+public class CommonException extends RuntimeException {
 
     private OutState state;
 
